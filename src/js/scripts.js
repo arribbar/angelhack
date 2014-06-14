@@ -42,4 +42,30 @@ function add_pub_crawl(message) {
 	})
 }
 
+function validate_message_form() {
+    var messageEntered = document.forms["message-form"]["message"].value;
+    if (messageEntered==null || messageEntered=="") {
+        error_handler("You must enter a message.");
+    }
+    else{
+    	publish_message(messageEntered);
+    }
+}
+
+ function publish_message(message){
+ 	console.log("Sending message");
+    pubnub.publish({
+    channel: 'demo',
+    message: message,
+ });
+}
+
+function error_handler(message){
+	alert(message);
+    return false;
+}
+
+
+
+
 
