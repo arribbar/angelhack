@@ -43,3 +43,10 @@ function add_pub_crawl(message) {
 }
 
 
+// form processing
+var new_crawl_form = document.getElementById('create_new_crawl');
+if (new_crawl_form.attachEvent) {
+    new_crawl_form.attachEvent("submit", processForm);
+} else {
+    new_crawl_form.addEventListener("submit", processForm);
+}
