@@ -1,19 +1,9 @@
 var MAIN_CHANNEL = 'london_pub_crawls'
 
-var mapOptions = {
-  center: new google.maps.LatLng(51.5, 0),
-  zoom: 7
-};
-
-var map = new google.maps.Map(document.getElementById("map-canvas"),
-    mapOptions);
-
-
 var pubnub = PUBNUB.init({
     publish_key   : 'demo',
     subscribe_key : 'demo'
 })
-
 
 // returns an event id (used as channel name)
 function create_pub_crawl(lat, long, crawl_name, description, organizer) {
