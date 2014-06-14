@@ -1,0 +1,12 @@
+<div class="row marketing">
+    <p>
+    map
+    </p>
+    <ul>
+        <li ng-repeat="event in events">
+        {{event.name}} ({{event.description}}) at {{event.location}}
+        <a ng-click="join('{{event.name}}')">Join</a>
+        </li>
+    </ul>
+    <a href="#/create">create</a>
+</div>
