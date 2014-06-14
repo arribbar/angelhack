@@ -32,3 +32,12 @@ label{
 .form-horizontal, .message-form {
 	padding: 10px; 
 }
+.generic_info {
+	display: block;
+	padding: 3px;
+	text-align: center;
+}
+.alert-info{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
