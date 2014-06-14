@@ -18,9 +18,7 @@ function processForm(e) {
 		var lat = position.coords.latitude;
 
 		console.log(crawl_organizer)
-
+		
 		create_pub_crawl(lat, long, crawl_name, crawl_description, crawl_organizer);		
 	});
-	
-	
 }

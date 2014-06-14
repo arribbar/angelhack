@@ -37,7 +37,8 @@ function add_pub_crawl(message) {
 		position : place,
 		map: map,
 		title: crawl_name + "\n" + desc + ". \n\nBy " + org,
-		animation : google.maps.Animation.DROP
+		animation : google.maps.Animation.DROP,
+		icon : "../img/bar.png"
 	})
 }
 
