@@ -1,10 +1,3 @@
-
-
-function showPosition(position) {
-	alert("the position is latitude " + position.coords.latitude + " lontitude " + position.coords.longitude)
-	return position.coords ;
-}
-
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
@@ -22,17 +15,16 @@ function showError(error) {
     }
 }
 
-function getPosition(){
+function getPosition(callback){
 	if (navigator.geolocation) {
 	    var optn = {
 	            enableHighAccuracy : true,
 	            timeout : Infinity,
 	            maximumAge : 0
 	        };                 
-	// Get the user's current position
-	navigator.geolocation.getCurrentPosition(showPosition, showError, optn);
+		// Get the user's current position
+    navigator.geolocation.getCurrentPosition(callback, showError, optn);
 	} else {
 	    alert('Geolocation is not supported in your browser');
 	}
 }
-

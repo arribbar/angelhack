@@ -19,7 +19,6 @@ function create_pub_crawl(lat, long, crawl_name, description, organizer) {
 	});	
 }
 
-
 pubnub.subscribe( {
 	channel : MAIN_CHANNEL,
 	message : function(m) { add_pub_crawl(m) }
@@ -63,16 +62,4 @@ function validate_message_form() {
 function error_handler(message){
 	alert(message);
     return false;
-}
-
-
-
-
-
-// form processing
-var new_crawl_form = document.getElementById('create_new_crawl');
-if (new_crawl_form.attachEvent) {
-    new_crawl_form.attachEvent("submit", processForm);
-} else {
-    new_crawl_form.addEventListener("submit", processForm);
 }
