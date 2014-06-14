@@ -1,11 +1,13 @@
 .maplarge {width: 100%; height: 250px }
-.mapsmall {width: 100%; height: 100px }
+.mapsmall {width: 100%; 
+height: 100px; }
+
 .column{
 	display: block;
 	padding: 3px;
 	text-align: center;
 }
-.column button{
+button{
 	margin: 0 auto;
 }
 .column h1{
@@ -20,4 +22,13 @@
 .logo{
 	display: block;
 	height:90px;
+}
+
+label{
+	display: block;
+	text-align: center;
+}
+
+.form-horizontal {
+	padding: 10px; 
 }
