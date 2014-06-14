@@ -9,6 +9,24 @@ var map = new google.maps.Map(document.getElementById("map-canvas"),
     mapOptions);
 
 
+if (navigator.geolocation) {
+		var optn = {
+		            enableHighAccuracy : true,
+		            timeout : Infinity,
+		            maximumAge : 0
+		        };
+		navigator.geolocation.getCurrentPosition(showPosition, showError, optn);
+} else {
+        alert('Geolocation is not supported in your browser');
+}
+
+function showPosition(position) {
+
+}
+
+
+
+
 var pubnub = PUBNUB.init({
     publish_key   : 'demo',
     subscribe_key : 'demo'
@@ -26,8 +44,7 @@ function create_pub_crawl(lat, long, crawl_name, description, organizer) {
 			'description' : description,
 			'organizer' : organizer
 		}
-	});
-	
+	});	
 }
 
 
