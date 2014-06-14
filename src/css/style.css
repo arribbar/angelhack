@@ -29,6 +29,6 @@ label{
 	text-align: center;
 }
 
-.form-horizontal {
+.form-horizontal, .message-form {
 	padding: 10px; 
 }
