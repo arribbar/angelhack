@@ -10,14 +10,9 @@ function processForm(e) {
 	var crawl_name = document.getElementById('name').value;
 	var crawl_description = document.getElementById('descr').value;
 	var crawl_organizer = document.getElementById('organizer').value;
-
-	getPosition(function(position) {
-		var long = position.coords.longitude;
-		var lat = position.coords.latitude;
-
-		console.log(crawl_organizer)
-		
-		create_pub_crawl(lat, long, crawl_name, crawl_description, crawl_organizer);		
-	});
+	alert(user_current_position.latitude + " hehehe")
+	
+	create_pub_crawl(user_current_position.latitude, user_current_position.longitude, crawl_name, crawl_description, crawl_organizer);		
+	
 	window.location.href = "index.html"
 }
