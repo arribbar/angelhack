@@ -13,6 +13,8 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href="styles/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoqvR1bfQhXzAVDyvQQ6zoMaJt4MBryNs"> </script>
   </head>
   <body ng-app="pubriderApp">
     <!--[if lt IE 7]>
@@ -20,7 +22,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="header">
         <a href="#/">home</a>
         <a href="#/about">about</a>
@@ -29,8 +31,11 @@
 
       <div ng-view=""></div>
 
-    </div>
+    </div> -->
 
+    <div class="container">
+        <div ng-view=""></div>
+</div>
 
 
     <!--[if lt IE 9]>
@@ -60,6 +65,8 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -68,8 +75,18 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/create.js"></script>
+        <script src="scripts/controllers/viewPubCrawlDetails.js"></script>
+        <script src="scripts/controllers/createMessage.js"></script>
+        <script src="scripts/controllers/createPubCrawl.js"></script>
         <script src="scripts/controllers/join.js"></script>
         <script src="scripts/controllers/manage.js"></script>
         <!-- endbuild -->
+
+    <script src="http://cdn.pubnub.com/pubnub.min.js"></script>
+    <script src="http://pubnub.github.io/angular-js/scripts/pubnub-angular.js"></script>
+
+    <!--<script src="scripts/customJs/location.js"></script>
+    <script src="scripts/customJs/map.js"></script>
+    <script src="scripts/customJs/scripts.js"></script>-->
 </body>
 </html>

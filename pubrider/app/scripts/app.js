@@ -15,7 +15,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'google-maps',
+    'pubnub.angular.service'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -27,9 +29,17 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/create', {
-        templateUrl: 'views/create.html',
-        controller: 'CreateCtrl'
+      .when('/create_pub_crawl/:latitude/:longitude', {
+        templateUrl: 'views/create_pub_crawl.html',
+        controller: 'CreatePubCrawlCtrl'
+      })
+      .when('/create_message', {
+        templateUrl: 'views/create_message.html',
+        controller: 'CreateMessageCtrl'
+      })
+      .when('/pub_crawl_details', {
+        templateUrl: 'views/pub_crawl_details.html',
+        controller: 'PubCrawlDetailsCtrl'
       })
       .when('/join/:event_id', {
         templateUrl: 'views/join.html',
