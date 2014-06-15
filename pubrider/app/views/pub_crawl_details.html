@@ -1,68 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>PubRider</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<div class="row clearfix">
+  <div class="col-md-12 column">
+  	<div class="logo">
+  		<img src="/images/beer.jpg" class="img-responsive" >
+  	</div>
+  	<h1>
+  		PubRider
+  	</h1>
+  </div>
 
-	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
-	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
-	<!--script src="js/less-1.3.3.min.js"></script-->
-	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
-	
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-  <![endif]-->
-
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoqvR1bfQhXzAVDyvQQ6zoMaJt4MBryNs">
-    </script>
-</head>
-
-<body>
-<div class="container">
-	<div class="row clearfix">
-			<div class="col-md-12 column">
-				<div class="logo">
-					<img src="./img/beer.jpg" class="img-responsive" >
-				</div>
-				<h1>
-					PubRider
-				</h1>
-		</div>
-
-	</div>
-        <div class="row">
-            <div class="col-lg-12 col-md-6 col-xs-12 column ">
-                <h3>Pub Crawl Details</h3>
-            </div>
-        </div>
-        <div class="clearfix"><div id="map-canvas" class="mapsmall"/> </div>
-        <div class="row clearfix">
-            <div name="generic_info" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-               <div class="alert alert-info">
-                  <span class="glyphicon glyphicon-glass"> </span><strong> Name:</strong> Fancy Pub Crawl</p>
-                </div>
-                <div class="alert alert-info">
-                  <span class="glyphicon glyphicon-chevron-right"></span><strong> Instruction:</strong> Come along with fancy dress.
-                </div>
-                <div class="alert alert-info">
-                  <span class="glyphicon glyphicon-user"></span><strong> Organised by</strong> Jerry
-                </div>
-                <div class="alert alert-warning"><p><span class="glyphicon glyphicon-warning-sign"></span> Be careful not to drink in excess...</br>but don't forget to drink though!</p></div>
-                <button class="btn btn-primary" type="submit">Join</button>
-            </div>
-        </div>
 </div>
-<script src="http://cdn.pubnub.com/pubnub.min.js"></script>
-<script src="js/map.js"></script>
-<script src="js/scripts.js"></script>
-</body>
-</html>
+<div class="row">
+    <div class="col-lg-12 col-md-6 col-xs-12 column ">
+        <h3>Pub Crawl Details</h3>
+    </div>
+</div>
+<div class="clearfix"><google-map center="map.center" zoom="map.zoom">
+                <marker coords="map.marker_position" icon="map.marker_icon"> </marker>
+            </google-map></div>
+<div class="row clearfix">
+    <div name="generic_info" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+       <div class="alert alert-info">
+          <span class="glyphicon glyphicon-glass"> </span><strong> Name:</strong> Fancy Pub Crawl</p>
+        </div>
+        <div class="alert alert-info">
+          <span class="glyphicon glyphicon-chevron-right"></span><strong> Instruction:</strong> Come along with fancy dress.
+        </div>
+        <div class="alert alert-info">
+          <span class="glyphicon glyphicon-user"></span><strong> Organised by</strong> Jerry
+        </div>
+        <div class="alert alert-warning"><p><span class="glyphicon glyphicon-warning-sign"></span> Be careful not to drink in excess...</br>but don't forget to drink though!</p></div>
+        <button ng-click="join_pub_crawl()"class="btn btn-primary" type="submit">Join</button>
+    </div>
+</div>

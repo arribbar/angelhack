@@ -1,16 +1,10 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name pubriderApp.controller:JoinCtrl
- * @description
- * # JoinCtrl
- * Controller of the pubriderApp
- */
+
 angular.module('pubriderApp')
   .controller('CreatePubCrawlCtrl', function ($scope,$routeParams,PubNub) {
   	PubNub.init({publish_key:"demo", subscribe_key:"demo"});
-  	$scope.selected_channel = "demo";
+  	$scope.selected_channel = "london_pub_crawls";
   	$scope.pub=[];
   	  $scope.pub.latitude = $routeParams.latitude;
   	  $scope.pub.longitude = $routeParams.longitude;
@@ -63,4 +57,4 @@ $scope.publish = function(){
 	});
 };
 
-  });
+});

@@ -33,11 +33,11 @@ angular
         templateUrl: 'views/create_pub_crawl.html',
         controller: 'CreatePubCrawlCtrl'
       })
-      .when('/create_message', {
+      .when('/create_message/:latitude/:longitude', {
         templateUrl: 'views/create_message.html',
         controller: 'CreateMessageCtrl'
       })
-      .when('/pub_crawl_details', {
+      .when('/pub_crawl_details/:latitude/:longitude', {
         templateUrl: 'views/pub_crawl_details.html',
         controller: 'PubCrawlDetailsCtrl'
       })
