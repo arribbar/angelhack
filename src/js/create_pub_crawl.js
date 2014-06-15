@@ -14,5 +14,6 @@ function processForm(e) {
 	
 	create_pub_crawl(user_current_position.latitude, user_current_position.longitude, crawl_name, crawl_description, crawl_organizer);		
 	
-	window.location.href = "index.html"
+	sessionStorage.setItem("newChannelName", crawl_name);
+	window.location.href = "create_message.html"
 }
