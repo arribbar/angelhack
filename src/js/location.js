@@ -23,8 +23,16 @@ function getPosition(callback){
 	            maximumAge : 0
 	        };                 
 		// Get the user's current position
-    navigator.geolocation.getCurrentPosition(callback, showError, optn);
+    navigator.geolocation.watchPosition(callback, showError, optn);
 	} else {
 	    alert('Geolocation is not supported in your browser');
 	}
+}
+
+function stopWatch() {
+    if (watchId) {
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+
+    }
 }
