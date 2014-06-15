@@ -5,6 +5,14 @@ var pubnub = PUBNUB.init({
     subscribe_key : 'demo'
 })
 
+var user_current_position = {latitude : null, longitude : null};
+
+getPosition(function(position){
+	user_current_position.latitude = position.coords.latitude;
+	user_current_position.longitude = position.coords.longitude;
+	alert("new user_current_position " + user_current_position.latitude + "   " + user_current_position.longitude);
+});
+
 // returns an event id (used as channel name)
 function create_pub_crawl(lat, long, crawl_name, description, organizer) {
 	pubnub.publish( {
