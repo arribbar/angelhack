@@ -6,7 +6,7 @@ getPosition(function(position) {
 
 	var mapOptions = {
 	  center: new google.maps.LatLng(lat, long),
-	  zoom: 15
+	  zoom: 6
 	};
 
 	map = new google.maps.Map(document.getElementById("map-canvas"),

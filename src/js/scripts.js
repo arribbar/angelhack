@@ -10,7 +10,7 @@ var user_current_position = {latitude : null, longitude : null};
 getPosition(function(position){
 	user_current_position.latitude = position.coords.latitude;
 	user_current_position.longitude = position.coords.longitude;
-	alert("new user_current_position " + user_current_position.latitude + "   " + user_current_position.longitude);
+	// alert("new user_current_position " + user_current_position.latitude + "   " + user_current_position.longitude);
 });
 
 // returns an event id (used as channel name)
