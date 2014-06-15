@@ -1,5 +1,5 @@
-var join_crawl_form = document.getElementById('create_button');
-if (join_crawl_form.attachEvent) {
+var join_crawl_form = document.getElementById('join_button');
+if (join_crawl_form != null && join_crawl_form.attachEvent) {
     join_crawl_form.attachEvent("click", processForm);
 } else {
     join_crawl_form.addEventListener("click", processForm);
