@@ -11,8 +11,6 @@ function processForm(e) {
 	var crawl_description = document.getElementById('descr').value;
 	var crawl_organizer = document.getElementById('organizer').value;
 
-
-
 	getPosition(function(position) {
 		var long = position.coords.longitude;
 		var lat = position.coords.latitude;
@@ -21,4 +19,5 @@ function processForm(e) {
 		
 		create_pub_crawl(lat, long, crawl_name, crawl_description, crawl_organizer);		
 	});
+	window.location.href = "index.html"
 }

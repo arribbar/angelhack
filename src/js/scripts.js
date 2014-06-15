@@ -33,13 +33,32 @@ function add_pub_crawl(message) {
 	org = message.organizer
 	
 	var place = new google.maps.LatLng(lat, long);
-	var marker = new google.maps.Marker({
-		position : place,
-		map: map,
-		title: crawl_name + "\n" + desc + ". \n\nBy " + org,
-		animation : google.maps.Animation.DROP,
-		icon : "../img/bar.png"
-	})
+	
+	if (markers_dict[crawl_name] != null) {
+		markers_dict[crawl_name].setPosition(place);
+	
+	} else {
+		var marker = new google.maps.Marker({
+			position : place,
+			map: map,
+			title: crawl_name + "\n" + desc + ". \n\nBy " + org,
+			animation : google.maps.Animation.DROP,
+			icon : "../img/bar.png"
+		})
+
+		markers_dict[crawl_name] = marker;
+	
+		google.maps.event.addListener(marker, 'click', function(event) {
+			sessionStorage.setItem("lat", lat);
+			sessionStorage.setItem("long", long);
+			sessionStorage.setItem("crawl_name", crawl_name);
+			sessionStorage.setItem("desc", desc);
+			sessionStorage.setItem("org", org);
+			window.location.href = "pub_crawl_details.html";
+		});
+		
+	}
+	
 }
 
 function validate_message_form() {
