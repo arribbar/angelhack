@@ -51,7 +51,7 @@ function add_pub_crawl(message) {
 			map: map,
 			title: crawl_name + "\n" + desc + ". \n\nBy " + org,
 			animation : google.maps.Animation.DROP,
-			icon : "/src/img/bar.png"
+			icon : "/img/bar.png"
 		})
 
 		markers_dict[crawl_name] = marker;

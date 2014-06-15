@@ -14,15 +14,15 @@ function processForm(e) {
  box = document.getElementById('message-area');
  input = document.getElementById('input');
 
- channel = sessionStorage.getItem("newChannelName");
-	console.log("Processing: using channel " + channel)
+ channel = sessionStorage.getItem("channel");
+	// console.log("Processing: using channel " + channel)
 	// alert(user_current_position.latitude + " hehehe")
 	pubnub.subscribe({
 	  channel : channel,
 	  message : function(text) {  box.innerHTML = text}
 	});
 	
-	console.log(box.innerHTML);
+	// console.log(box.innerHTML);
 	pubnub.publish({
 		channel : channel,
 		message : input_message 

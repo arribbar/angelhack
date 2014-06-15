@@ -9,7 +9,7 @@ pubnub.history({
 function publish_history(history) {
 	for (var i =0; i<history[0].length; i++) {
 		var obj = history[0][i];
-		console.log(obj)
+		// console.log(obj)
 		create_pub_crawl(obj.latitude, obj.longitude, obj.crawl_name, obj.description, obj.organizer);		
 	}
 }
