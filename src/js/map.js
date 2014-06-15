@@ -15,8 +15,10 @@ getPosition(function(position) {
 	var myLatlng = new google.maps.LatLng(lat,long)
 	var marker = new google.maps.Marker({
 	    position: myLatlng,
-	    title:"Your new pub crawl?"
+	    title: "You are here"
 	});
 	
 	marker.setMap(map);
 });
+
+markers_dict = {}
