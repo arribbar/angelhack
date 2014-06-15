@@ -1,0 +1,43 @@
+﻿<div class="row clearfix">
+			<div class="col-md-12 column">
+				<div class="logo">
+					<img src="../images/beer.jpg" class="img-responsive" >
+				</div>
+				<h1>
+					PubRider
+				</h1>
+		</div>
+
+	</div>
+        <div class="row">
+            <div class="col-lg-12 col-md-6 col-xs-12 column ">
+                <h3>Start New Pubcrawl here:</h3>	
+			</div>
+		</div>
+		<google-map center="map.center" zoom="map.zoom">
+                <marker coords="map.marker_position" icon="map.marker_icon"> </marker>
+            </google-map>
+        <div class="row clearfix">
+            <div role="form" class="col-lg-12 col-md-6 col-xs-12">
+                <form id="create_new_crawl" class="form-horizontal" accept-charset="utf-8">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" ng-model="pub.name" name="name" id="name" placeholder="AngelHack2014 Pubcrawl" />
+                    </div>
+                    <div class="form-group">
+                        <label for="descr">Description</label>
+                        <textarea name="descr" class="form-control" ng-model="pub.description" id="descr" rows="8" cols="40" placeholder="This is the best pub crawl in London!"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="organizer">Organizer</label>
+                        <input type="text" class="form-control" ng-model="pub.organizer" name="organizer" id="organizer" placeholder="John Doe" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary active" type="button" id="create_button" ng-click="publish()">Cheers!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+<!--<script src="../customJs/location.js"></script>
+<script src="../customJs/map.js"></script>
+<script src="../customJs/scripts.js"></script>-->

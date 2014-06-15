@@ -1,0 +1,44 @@
+.maplarge {width: 100%; height: 250px }
+.mapsmall {width: 100%; 
+height: 100px; }
+.angular-google-map-container { height: 250px; }
+
+.column{
+	display: block;
+	padding: 3px;
+	text-align: center;
+}
+button{
+	margin: 0 auto;
+}
+.column h1{
+	padding: 5px;
+	margin: 5px;
+}
+.column h3{
+	padding: 5px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.logo{
+	display: block;
+	height:90px;
+}
+
+label{
+	display: block;
+	text-align: center;
+}
+
+.form-horizontal, .message-form {
+	padding: 10px; 
+}
+.generic_info {
+	display: block;
+	padding: 3px;
+	text-align: center;
+}
+.alert-info{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
