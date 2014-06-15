@@ -1,24 +1,22 @@
-var map
+var map;
 
-getPosition(function(position) {
-	var lat = position.coords.latitude;
-	var long = position.coords.longitude;
-
+function setUserPositionMap(){
 	var mapOptions = {
-	  center: new google.maps.LatLng(lat, long),
+	  center: new google.maps.LatLng(user_current_position.latitude, user_current_position.longitude),
 	  zoom: 15
 	};
 
 	map = new google.maps.Map(document.getElementById("map-canvas"),
 	    mapOptions);	
 			
-	var myLatlng = new google.maps.LatLng(lat,long)
+	var myLatlng = new google.maps.LatLng(user_current_position.latitude,user_current_position.longitude);
 	var marker = new google.maps.Marker({
 	    position: myLatlng,
 	    title: "You are here"
 	});
 	
 	marker.setMap(map);
-});
 
-markers_dict = {}
+
+}
+ 	markers_dict = {}	
