@@ -1,6 +1,12 @@
 'use strict';
 
-
+/**
+ * @ngdoc function
+ * @name pubriderApp.controller:createPubCrawlCtrl
+ * @description
+ * # CreatePubCrawlCtrl
+ * Controller of the pubriderApp
+ */
 angular.module('pubriderApp')
   .controller('CreatePubCrawlCtrl', function ($scope,$routeParams,PubNub) {
   	PubNub.init({publish_key:"demo", subscribe_key:"demo"});
@@ -32,17 +38,6 @@ angular.module('pubriderApp')
     		longitude: $scope.pub.longitude 
     	}
 	};
-
-$scope.processForm = function(e){
-	alert("hi");
-
-
-
-	console.log(crawl_organizer);
-		
-	// create_pub_crawl($scope.latitude, $scope.longitude, crawl_name, crawl_description, crawl_organizer);		
-	
-};
 
 $scope.publish = function(){
 	PubNub.ngPublish({
