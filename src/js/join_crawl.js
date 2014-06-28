@@ -6,18 +6,17 @@ if (join_crawl_form != null && join_crawl_form.attachEvent) {
 }
 
 function processForm(e) {
-	var crawl_name = document.getElementById('name').value;
-	var crawl_description = document.getElementById('descr').value;
-	var crawl_organizer = document.getElementById('organizer').value;
+	var crawl_name = document.getElementById('name').innerHTML;
+	var crawl_description = document.getElementById('desc').innerHTML;
+	var crawl_organizer = document.getElementById('org').innerHTML;
 
+	sessionStorage.setItem("channel", crawl_name)
+	
+	window.location.href = "see_messages.html"
 
-
-	getPosition(function(position) {
-		var long = position.coords.longitude;
-		var lat = position.coords.latitude;
-
-		console.log(crawl_organizer)
-		
-		create_pub_crawl(lat, long, crawl_name, crawl_description, crawl_organizer);		
-	});
+	// getPosition(function(position) {
+	// 	var long = position.coords.longitude;
+	// 	var lat = position.coords.latitude;
+	// create_pub_crawl(lat, long, crawl_name, crawl_description, crawl_organizer);		
+	// });
 }

@@ -3,7 +3,7 @@ var map;
 function setUserPositionMap(){
 	var mapOptions = {
 	  center: new google.maps.LatLng(user_current_position.latitude, user_current_position.longitude),
-	  zoom: 6
+	  zoom: 15
 	};
 
 	map = new google.maps.Map(document.getElementById("map-canvas"),
