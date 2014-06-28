@@ -6,7 +6,7 @@ var pubnub = PUBNUB.init({
 })
 
 var user_current_position = {latitude : null, longitude : null};
-
+var destination_user = "hello" ;
 getPosition(function(position){
 	user_current_position.latitude = position.coords.latitude;
 	user_current_position.longitude = position.coords.longitude;

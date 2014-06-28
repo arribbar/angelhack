@@ -24,12 +24,5 @@ alert("your current location needs to be found ");
      	directionsDisplay.setPanel(document.getElementById("direction-panel"));
     }
   });
-document.getElementById('id1').style.visibility='visible'; // hide  
-document.getElementById('id2').style.visibility='visible'; // hide 
-document.getElementById('id3').style.visibility='visible'; // hide 
-document.getElementById('id4').style.visibility='visible'; // hide 
-document.getElementById('id5').style.visibility='hidden'; // hide 
-document.getElementById('id6').style.visibility='visible'; // hide 
-document.getElementById('map-canvas').style.height='100px'; // show 
+
 }
-  
